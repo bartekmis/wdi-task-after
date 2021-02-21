@@ -66,18 +66,19 @@
 					display: block;
 
 				    content: "";
-				    width: 22px;
-				    height: 9px;
+					
+					width: 0; 
+					height: 0; 
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
 				}
 			}
-
-
-
+			
 			&.blue.active {
 				background: $blue1;
 
 				&:before {
-					background: url(/assets/images/homework/top-arrow-capture.png);
+					border-bottom: 10px solid $blue1;
 				}
 			}
 
@@ -85,24 +86,23 @@
 				background: $green;
 
 				&:before {
-					background: url(/assets/images/homework/top-arrow-store.png);
+					border-bottom: 10px solid $green;
 				}
 			}
 
 			&.orange.active {
-				background: $orange;
+				background: $green;
 
 				&:before {
-					background: url(/assets/images/homework/top-arrow-analyze.png);
+					border-bottom: 10px solid $green;
 				}
 			}
 
 			&.red.active {
 				background: $red;
 
-
 				&:before {
-					background: url(/assets/images/homework/top-arrow-consume.png);
+					border-bottom: 10px solid $red;
 				}
 			}
 		}

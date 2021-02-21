@@ -19,7 +19,6 @@ $breakpoint3: 1340px;
 			overflow: hidden;
 
 			.layout {
-				padding: 0 !important;
 				width: 100%;
 			}
 
@@ -29,18 +28,10 @@ $breakpoint3: 1340px;
 
 			.headline-1,
 			p,
-			img,
+			img#pc,
 			.home-banner__anim,
 			.l-home-banner__3-cols > div {
 				opacity: 1 !important;
-			}
-
-			.btn {
-				opacity: 0;
-			}
-
-			.btn--arrow-down {
-				display: none !important;
 			}
 		}
 
@@ -1534,8 +1525,7 @@ $breakpoint3: 1340px;
 @media screen and (max-height: 850px) {
 	.l-home-banner {
 		.layout {
-			padding-top: 30px;
-			padding-bottom: 30px;
+			padding: 0;
 		}
 
 		.headline-1 {

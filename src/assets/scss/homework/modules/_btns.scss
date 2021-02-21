@@ -80,15 +80,23 @@
     "red"    $red,
     "orange" $orange,
     "green"  $green
-    ;
+	;
+	
+	&.btn--border-blue {
+		background: linear-gradient(254deg,#1296e8 0,#31617c 65%,#07b8ff 100%);
+	}
 
-    @each $i in $colorList {
-        &.btn--border-#{nth($i,1)} {
-            background: #{nth($i,2)};
-            background: url(/assets/images/homework/btn-grad-#{nth($i,1)}.svg);
-        }
-    }
+	&.btn--border-green {
+		background: linear-gradient(254deg,#53ad16 0,#89f045 65%,#377c0a 100%);
+	}
 
+	&.btn--border-orange {
+		background: linear-gradient(254deg,#ff9900 0,#ffb411 65%,#c07505 100%);
+	}
+
+	&.btn--border-red {
+		background: linear-gradient(254deg,#ff3c00 0,#ff633c 65%,#b33009 100%);
+	}
 
 	&:hover {
 		background-position: -200px;
@@ -130,5 +138,17 @@
 		span {
 			background-color: rgba(3,93,148, 1);
 		}
+	}
+}
+
+
+.btn.btn--loading {
+
+	span {
+		background-image: url(/assets/images/homework/ajax-loader.gif);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-color: #ededed;
+		text-indent: -9999px;
 	}
 }

@@ -6,16 +6,22 @@
 .headline-6,
 .headline-7,
 .headline-8 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat, sans-serif;
 	display: block;
 	font-weight: 600;
 	line-height: 1.02;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.04em;
 	padding-bottom: .55em;
 }
 
 .headline-1 {
-	font-size: 5em; // 85px
+	font-size: 5em; // 80px
+
+	html:not(.fonts-loaded) & {
+		font-family: arial;
+		letter-spacing: 0;
+		word-spacing: 0.25em;
+	}
 }
 
 
