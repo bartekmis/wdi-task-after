@@ -16,7 +16,13 @@
     <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
     <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
     <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
-    <script src="https://js.stripe.com/v3/"></script>
+
+
+    <style>
+    fscript {display: none;}
+    </style>
+    
+    <fscript src="https://js.stripe.com/v3/"></fscript>
     
     <link href="/assets/css/homework/app.css" rel="stylesheet">
 
@@ -29,7 +35,7 @@
     <!-- End Google Tag Manager -->
 
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
+    <fscript>
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
       (function(){
       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -39,7 +45,7 @@
       s1.setAttribute('crossorigin','*');
       s0.parentNode.insertBefore(s1,s0);
       })();
-    </script>
+    </fscript>
     <!--End of Tawk.to Script-->
 
     <script> (function (w, d) { w.addEventListener('LazyLoad::Initialized', function (e) { w.lazyLoadInstance = e.detail.instance; }, false); var b = d.getElementsByTagName('head')[0]; var s = d.createElement("script"); s.async = true; var v = !("IntersectionObserver" in w) ? "lazyloadPolyfill.js" : "lazyloadIntersectionObserver.js"; s.src = "/assets/js/homework/" + v; w.lazyLoadOptions = { elements_selector: ".lazy", threshold: 100, callback_enter: function(element) { var css = element.getAttribute('data-style'); if (css) { css = css.replace(/(\r\n|\n|\r)/gm, ""); var style = document.createElement('style'); var head = document.getElementsByTagName('head')[0]; head.appendChild(style); style.setAttribute("type", "text/css"); if (style.styleSheet) { style.styleSheet.cssText = css; } else { var styleText = document.createTextNode(css); style.appendChild(styleText); } setTimeout(function() { element.classList.add('lazy--loaded'); }, 300); } } }; b.appendChild(s); }(window, document)); </script>
@@ -915,9 +921,6 @@
     </footer>
     <!-- // -->
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <script>var scriptsExecuted=false; var head=document.getElementsByTagName('head')[0] || document.documentElement; function executeScripts(){var fscripts=document.querySelectorAll('fscript'); [].forEach.call(fscripts, function(fscript){var script=document.createElement('script'); script.type='text/javascript'; if (fscript.hasAttributes()){for (var attributeKey in fscript.attributes){if (fscript.attributes.hasOwnProperty(attributeKey)){script[ fscript.attributes[ attributeKey].name]=fscript.attributes[ attributeKey].value || true;}}}else{script.appendChild( document.createTextNode( fscript.innerHTML ) );}head.insertBefore( script, head.firstChild );});}function initScripts(){console.log(123); if (scriptsExecuted){return;}scriptsExecuted=true; setTimeout(function(){if ('requestIdleCallback' in window){requestIdleCallback(executeScripts,{timeout: 1000});}else{executeScripts();}}, 1000);}window.addEventListener('scroll', function(){initScripts();}, false); document.onclick=function(){initScripts();}; </script>
   </body>
 </html>
