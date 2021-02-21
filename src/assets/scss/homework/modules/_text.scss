@@ -27,13 +27,6 @@
             font-weight: 300;
             letter-spacing: 0;
             line-height: 1.41;
-
-            html:not(.fonts-loaded) & {
-              font-family: arial;
-              letter-spacing: 0.022em;
-              word-spacing: 0.23em;
-              font-weight: 200;
-            }
           }
 
           p + ul {

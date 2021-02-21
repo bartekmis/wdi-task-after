@@ -16,12 +16,6 @@
 
 .headline-1 {
 	font-size: 5em; // 80px
-
-	html:not(.fonts-loaded) & {
-		font-family: arial;
-		letter-spacing: 0;
-		word-spacing: 0.25em;
-	}
 }
 
 
