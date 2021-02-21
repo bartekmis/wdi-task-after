@@ -50,21 +50,11 @@
 		color: #fff;
 		text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
 
-		background:
-			url(/assets/images/homework/map-dotted.png) center center no-repeat,
-			url(/assets/images/homework/bg-sec-grad-lime.svg) top center no-repeat;
-		background-size: auto auto, cover;
-		background-attachment: fixed, scroll;
-
-
 		&.page-section--global-map__home {
 			padding-bottom: 2em;
 			text-align: center;
 		}
 	}
-
-
-
 
 
 	@mixin triangle() {
@@ -275,8 +265,8 @@
 
 
 	.page-section--bg-dark {
-		background: #131213 url(/assets/images/homework/bg-sec-dark-circles.png) top center repeat-x;
-
+		background-color: #131213;
+		
 		.text {
 			@extend .text--bg-grey;
 		}
@@ -289,13 +279,6 @@
 		text-align: center;
 		color: #fff;
 		text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
-
-		background:
-			url(/assets/images/homework/bg-sec-fixed-network.png) bottom center no-repeat,
-			url(/assets/images/homework/bg-sec-grad-blue.svg) center center no-repeat;
-		background-size: auto auto, cover;
-
-		//background-attachment: fixed;
 
 		.headline-2 {
 			color: $lightblue2;
@@ -311,7 +294,7 @@
 
 
 	.page-section--home-light-bg {
-		background: #f7f7f7 url(/assets/images/homework/bg-sec-grey-grid.png) top center no-repeat;
+		background-color: #f7f7f7;
 		color: #999;
 
 		.headline-6,

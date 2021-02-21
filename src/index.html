@@ -203,7 +203,35 @@
         </div>
       </div>
 
-    <header class="l-home-banner">
+      <style>
+      @media screen and (min-width:768px) and (max-width:1024px) {
+        #header-homepage-1613420480 {
+          background-image: url('/assets/images/homework/banner-1024.png?tr=w-1024')
+        }
+      }
+  
+      @media screen and (min-width:1025px) and (max-width:1199px) {
+        #header-homepage-1613420480 {
+          background-image: url('/assets/images/homework/banner-1200.png?tr=w-1200')
+        }
+      }
+  
+      @media screen and (min-width:1200px) and (max-width:1440px) {
+        #header-homepage-1613420480 {
+          background-image: url('/assets/images/homework/banner-1440.png?tr=w-1440')
+        }
+      }
+  
+      @media screen and (min-width:1441px) {
+        #header-homepage-1613420480 {
+          background-image: url('/assets/images/homework/banner-1920.png?tr=w-1920')
+        }
+      }
+      </style>
+  
+      <header
+        class="l-home-banner"
+        id="header-homepage-1613420480">
       <div class="layout">
         <div class="home-banner__content text">
           <h1 class="headline-1">Seamless<br> payment option</h1>
@@ -287,7 +315,13 @@
         <div class="layout">
           <h2 class="headline-2">Find out more</h2>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/W9-dlonF1JE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/W9-dlonF1JE" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
         </div>
       </div>
 
@@ -371,7 +405,18 @@
         </div>
       </div>
       <!-- // -->
-      <div class="page-section page-section--global-map page-section--global-map__home page-section--triangle-white">
+      <div 
+        class="page-section page-section--global-map page-section--global-map__home page-section--triangle-white lazy"
+        id="section-global-map"
+        data-style="
+          #section-global-map {
+            background:
+              url('https://ik.imagekit.io/pmo6tipgtxn/assets/images/homework/map-dotted.png') center center no-repeat,
+              url('https://ik.imagekit.io/pmo6tipgtxn/assets/images/homework/bg-sec-grad-lime.svg') top center no-repeat;
+            background-size: auto auto, cover;
+            background-attachment: fixed, scroll;
+          }
+        ">
         <div class="layout">
           <h3 class="headline-3">Global cloud-based solution <br>for your online business.</h3>
         </div>
@@ -498,7 +543,17 @@
       </div>
       <!-- // -->
       <!-- advantages boxes -->
-      <div class="page-section page-section--network page-section--triangle-black text">
+      <div 
+        class="page-section page-section--network page-section--triangle-black text lazy"
+        id="section-network"
+        data-style="
+          #section-network {
+            background:
+              url('https://ik.imagekit.io/pmo6tipgtxn/assets/images/homework/bg-sec-fixed-network.png') bottom center no-repeat,
+              url('https://ik.imagekit.io/pmo6tipgtxn/assets/images/homework/bg-sec-grad-blue.svg') center center no-repeat;
+            background-size: auto auto, cover;
+          }
+        ">
         <div class="layout">
           <section class="col-33 left">
             <div>
@@ -552,7 +607,14 @@
             </div>
             <div class="info-box__blue col-60 right">
               <div>
-                <div class="left col-65 text text--bg-blue">
+                <div 
+                  class="left col-65 text text--bg-blue lazy"
+                  id="home-light-blue"
+                  data-style="
+                    #home-light-blue {
+                      background-image: url('https://ik.imagekit.io/pmo6tipgtxn/assets/images/homework/bg-box-grad-blue.jpg');
+                    }
+                  ">
                   <ul>
                     <li>
                       Greater flexibility and lower cost than on-premise solutions
@@ -587,7 +649,14 @@
     <!-- social media sidebar -->
     <aside class="l-social-media">
       <div class="layout">
-        <div class="col-70 l-social-media__news-blog left">
+        <div 
+          id="social-media"
+          class="col-70 l-social-media__news-blog left lazy"
+          data-style="
+            #social-media {
+              background-image: url('https://ik.imagekit.io/pmo6tipgtxn/assets/images/homework/bg-box-clouds.png');
+            }
+          ">
           <div>
             <section class="l-home__news">
               <h5 class="headline-6">News <span class="headline__see-all"><a title="See all news" href="/">See all news</a></span></h5>
