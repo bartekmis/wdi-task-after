@@ -11,21 +11,6 @@
     <link href="/favicon.ico" rel="icon">
 
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500" rel="stylesheet">
-
-    <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
-    <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
-    <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
-
-
-    <style>
-    fscript {display: none;}
-    </style>
-    
-    <fscript src="https://js.stripe.com/v3/"></fscript>
-    
-    <link href="/assets/css/homework/app.css" rel="stylesheet">
-
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -33,6 +18,16 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>
     <!-- End Google Tag Manager -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500" rel="stylesheet">
+
+    <style>
+    fscript {display: none;}
+    </style>
+
+    <link href="/assets/css/homework/app.css" rel="stylesheet">
+
+    <fscript src="https://js.stripe.com/v3/"></fscript>
 
     <!--Start of Tawk.to Script-->
     <fscript>
@@ -920,6 +915,10 @@
       </div>
     </footer>
     <!-- // -->
+
+    <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
+    <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
+    <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
 
     <script>var scriptsExecuted=false; var head=document.getElementsByTagName('head')[0] || document.documentElement; function executeScripts(){var fscripts=document.querySelectorAll('fscript'); [].forEach.call(fscripts, function(fscript){var script=document.createElement('script'); script.type='text/javascript'; if (fscript.hasAttributes()){for (var attributeKey in fscript.attributes){if (fscript.attributes.hasOwnProperty(attributeKey)){script[ fscript.attributes[ attributeKey].name]=fscript.attributes[ attributeKey].value || true;}}}else{script.appendChild( document.createTextNode( fscript.innerHTML ) );}head.insertBefore( script, head.firstChild );});}function initScripts(){console.log(123); if (scriptsExecuted){return;}scriptsExecuted=true; setTimeout(function(){if ('requestIdleCallback' in window){requestIdleCallback(executeScripts,{timeout: 1000});}else{executeScripts();}}, 1000);}window.addEventListener('scroll', function(){initScripts();}, false); document.onclick=function(){initScripts();}; </script>
   </body>
