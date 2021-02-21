@@ -59,6 +59,12 @@
     <!--End of Tawk.to Script-->
 
     <script> (function (w, d) { w.addEventListener('LazyLoad::Initialized', function (e) { w.lazyLoadInstance = e.detail.instance; }, false); var b = d.getElementsByTagName('head')[0]; var s = d.createElement("script"); s.async = true; var v = !("IntersectionObserver" in w) ? "lazyloadPolyfill.js" : "lazyloadIntersectionObserver.js"; s.src = "/assets/js/homework/" + v; w.lazyLoadOptions = { elements_selector: ".lazy", threshold: 100, callback_enter: function(element) { var css = element.getAttribute('data-style'); if (css) { css = css.replace(/(\r\n|\n|\r)/gm, ""); var style = document.createElement('style'); var head = document.getElementsByTagName('head')[0]; head.appendChild(style); style.setAttribute("type", "text/css"); if (style.styleSheet) { style.styleSheet.cssText = css; } else { var styleText = document.createTextNode(css); style.appendChild(styleText); } setTimeout(function() { element.classList.add('lazy--loaded'); }, 300); } } }; b.appendChild(s); }(window, document)); </script>
+
+    <script>
+      document.fonts.ready.then(function() {
+        document.getElementsByTagName('html')[0].classList.add('fonts-loaded');
+      });
+    </script>
   </head>
   <body>
 
@@ -129,7 +135,7 @@
                   Just download it and enjoy.
                 </p>
                 <p>
-                  <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording">Download now</a>
+                  <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording"><span>Download now</span></a>
                 </p>
               </div>
             </div>
@@ -178,7 +184,7 @@
                   Some text is here so you are impressed and you will click the button below.
                 </p>
                 <p>
-                  <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now">Download now</a>
+                  <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now"><span>Download now</span></a>
                 </p>
               </div>
             </div>
@@ -211,7 +217,7 @@
                     An MNO service that doesn&#39;t require a SIM change
                 </p>
                 <p>
-                  <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now">Download now</a>
+                  <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now"><span>Download now</span></a>
                 </p>
               </div>
             </div>
@@ -263,7 +269,10 @@
               <p><strong>Cloud Speech Analytics</strong></p>
             </div>
           </div>
-          <p><a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=4ypqTZcM-9M">Watch video now</a><a class="btn btn--transparent-white" href="">or Contact us</a></p>
+          <p>
+            <a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=4ypqTZcM-9M"><span>Watch video now</span></a>
+            <a class="btn btn--transparent-white" href=""><span>or Contact us</span></a>
+          </p>
         </div>
 
         <div class="home-banner__anim">
@@ -283,7 +292,7 @@
           <img id="email" src="https://ik.imagekit.io/pmo6tipgtxn/assets/images/homework/anim/email.png" alt="Email" />
         </div>
       </div>
-      <a title="Slide down" class="btn btn--border-blue btn--arrow-down" href="#main">Slide down</a>
+      <a title="Slide down" class="btn btn--border-blue btn--arrow-down" href="#main"><span>Slide down</span></a>
     </header>
     <div class="l-shortcuts l-shortcuts--home">
       <div class="layout">
@@ -322,7 +331,7 @@
           </div>
           <div id="bank-name"></div>
         
-          <button class="btn btn--bg-darkblue btn--border-blue" type="submit">Submit Payment</button>
+          <button class="btn btn--bg-darkblue btn--border-blue" type="submit"><span>Submit Payment</span></button>
         </form>
       </div>
     </div>
@@ -361,7 +370,7 @@
               </h2>
               <p class="small-text">
                 Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. <br>
-                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
+                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/"><span>Find out more</span></a>
               </p>
             </div>
           </section>
@@ -379,7 +388,7 @@
               </h2>
               <p class="small-text">
                   Vestibulum commodo volutpat a, convallis ac, laoreet enim.<br>
-                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
+                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/"><span>Find out more</span></a>
               </p>
             </div>
           </section>
@@ -397,7 +406,7 @@
               </h2>
               <p class="small-text">
                   Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus.<br>
-                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
+                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/"><span>Find out more</span></a>
               </p>
             </div>
           </section>
@@ -416,7 +425,7 @@
               </h2>
               <p class="small-text">
                   Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu.<br>
-                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
+                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/"><span>Find out more</span></a>
               </p>
             </div>
           </section>
@@ -469,7 +478,7 @@
                     Quisque cursus et, porttitor risus. 
                   </p>
                   <p>
-                    <a title="Find out more" class="btn btn--bg-black btn--border-blue" href="/">Find out more</a>
+                    <a title="Find out more" class="btn btn--bg-black btn--border-blue" href="/"><span>Find out more</span></a>
                   </p>
                 </div>
               </section>
@@ -517,7 +526,7 @@
                     Aliquam sem. In hendrerit nulla quam nunc.
                   </p>
                   <p>
-                    <a title="Find out more" class="btn btn--bg-black btn--border-orange" href="/">Find out more</a>
+                    <a title="Find out more" class="btn btn--bg-black btn--border-orange" href="/"><span>Find out more</span></a>
                   </p>
                 </div>
               </section>
@@ -540,7 +549,7 @@
                       Lorem ipsum primis in nibh vel risus. Sed vel lectus.
                   </p>
                   <p>
-                    <a title="Find out more" class="btn btn--bg-black btn--border-red" href="/">Find out more</a>
+                    <a title="Find out more" class="btn btn--bg-black btn--border-red" href="/"><span>Find out more</span></a>
                   </p>
                 </div>
               </section>
@@ -592,7 +601,7 @@
                 Communications Intelligence Platform is PCI DSS Level 1 compliant
               </p>
               <p>
-                <a title="Find out more" class="btn btn--bg-darkblue btn--border-blue" href="/">Find out more</a>
+                <a title="Find out more" class="btn btn--bg-darkblue btn--border-blue" href="/"><span>Find out more</span></a>
               </p>
             </div>
           </section>
@@ -620,7 +629,7 @@
             <div class="info-box__light text col-35 left">
               <div>
                 <p>In 2013, Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing.</p>
-                <p><a class="btn btn--bg-white btn--border-blue" href="/">Our Accreditations</a></p>
+                <p><a class="btn btn--bg-white btn--border-blue" href="/"><span>Our Accreditations</span></a></p>
               </div>
             </div>
             <div class="info-box__blue col-60 right">
@@ -655,7 +664,7 @@
                     width="478"
                     height="439"
                     alt="">
-                  <a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=KCK0PqiJbA0">Product Tour</a>
+                  <a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=KCK0PqiJbA0"><span>Product Tour</span></a>
                 </div>
               </div>
             </div>
@@ -705,7 +714,7 @@
                       Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
                     </p>
                     <p>
-                      <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
+                      <a title="Read more" class="btn btn--bg-white btn--border-blue" href=""><span>Read more</span></a>
                     </p>
                   </div>
                 </article>
@@ -736,7 +745,7 @@
                       Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
                     </p>
                     <p>
-                      <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
+                      <a title="Read more" class="btn btn--bg-white btn--border-blue" href=""><span>Read more</span></a>
                     </p>
                   </div>
                 </article>
@@ -768,7 +777,7 @@
                       Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
                     </p>
                     <p>
-                      <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
+                      <a title="Read more" class="btn btn--bg-white btn--border-blue" href=""><span>Read more</span></a>
                     </p>
                   </div>
                 </article>

@@ -98,6 +98,14 @@
 
 			transition: color 0.2s ease-in-out, background 0.2s ease-in-out, padding 0.2s ease-in-out;
 
+			
+			html:not(.fonts-loaded) & {
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 600;
+				letter-spacing: 0.9px;
+				word-spacing: -0.05px;
+			}
+
 
 		    &:hover {
 		    	background-color: $blue1;

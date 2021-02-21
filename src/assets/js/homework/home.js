@@ -3,7 +3,7 @@ require(['./main'], function (main) {
 
 
 
-	require(['jquery', 'components/domReady', 'tweenmax', 'components/bxslider', 'waypoints', 'global'], function($, domReady, tweenmax, $bxslider, waypoints, global) {
+	require(['jquery', 'tweenmax', 'components/bxslider', 'waypoints', 'global'], function($, tweenmax, $bxslider, waypoints, global) {
 		
 
 		var h = {
@@ -37,87 +37,36 @@ require(['./main'], function (main) {
 			    }
 
 
-
-
-
 					/* init anim items and set initial properties */
-				    TweenMax.set('#platform', {top:'-10%'});
-				    TweenMax.set('#platform, #card-base, #card-chip, #email', {top:'-10%'});
 
-				    TweenMax.set('#chart-base', {top:'5%'});
-				    TweenMax.set('#chart-1', {scaleY:0.1, top:'50.2%'});
-				    TweenMax.set('#chart-2', {scaleY:0.1, top:'53.8%'});
-				    TweenMax.set('#chart-3', {scaleY:0.1, top:'63.4%'});
-
-				    TweenMax.set('#cloud', {left:'20%', top:'8%'});
-				    TweenMax.set('#social', {left:'-10%', top:'-4%'});
-				    TweenMax.set('#mobile', {top:'20%'});
-				    TweenMax.set('#pc', {left:'10%', top:'-2%'});
-
-				    TweenMax.set('#rainbow', {opacity:0, left:'-5%'});
-
-
-					TweenLite.to('.home-banner__content p', 2, {opacity:1, delay:1.6});
-					TweenLite.to('.l-home-banner__3-cols > div', 1, {opacity:1, delay:1.7});
-					TweenLite.to('.home-banner__content .headline-1', 2, {opacity:1, delay:1.1});
+					TweenLite.to('.l-home-banner__3-cols > div', 1, {opacity:1, delay:0.4});
 					TweenLite.to('.home-banner__anim img', 1, {opacity:1});
-					TweenLite.to('.home-banner__content p .btn', 2, {opacity:1, delay:0});
-					TweenLite.to('.l-home-banner .btn--arrow-down', 2, {opacity:1, delay:2});
+					TweenLite.to('.l-home-banner .btn--arrow-down', 2, {opacity:1, delay:0.5});
 
 
 				    start_anim();
 
 			},
 
-
-			// banner height adjustment
-			adjust_banner_height: function() {
-				var do_it = 0;
-
-
-				function change_banner_size() {
-					if($(window).width() > 1150 && $(window).height() > 700)
-					{
-						var viewport_h = $(window).height(),
-							navbar_h = $('.l-navbar').height()
-
-						var banner_height = viewport_h - navbar_h;
-
-						$('.l-home-banner').css({'height':banner_height});
-					}
-					else {
-						$('.l-home-banner').css({'height':'auto'});
-					}
-
-					if($(window).width() > 1150 && $(window).height() > 1000)
-					{
-						$('.l-home-banner').css({'height':'800px'});
-					}
-				}
-
-
-				change_banner_size();
-				this.banner_anim();
-
-
-				$(window).resize(function(){
-					clearTimeout(do_it);
-					do_it = setTimeout(function(){change_banner_size();}, 100);
-				});
-			},
-
-
-
 			slider_features: function() 
 			{
-	            $('#slider-features').bxSlider({
-	                nextSelector: '.btn-arrow--right',
-	                prevSelector: '.btn-arrow--left',
-	                nextText: '',
-	                prevText: '',
-	                pagerCustom: '#slider-features-pager',
-	                touchEnabled: false
-	            });
+				var isSliderRendered = false;
+
+				$('#slider-features').waypoint(function(direction) {
+					if (isSliderRendered) {
+						return;
+					}
+					$('#slider-features').bxSlider({
+						nextSelector: '.btn-arrow--right',
+						prevSelector: '.btn-arrow--left',
+						nextText: '',
+						prevText: '',
+						pagerCustom: '#slider-features-pager',
+						touchEnabled: false
+					});
+
+					isSliderRendered = true;
+				}, { offset: '100%' });
 			},
 
 
@@ -150,7 +99,10 @@ require(['./main'], function (main) {
 
 
 			init: function() {
-				this.adjust_banner_height();
+				if ($(window).width() > 730) {
+					this.banner_anim();
+				}
+
 				this.slider_features();
 				this.shortcuts();
 				this.info_box_anim();

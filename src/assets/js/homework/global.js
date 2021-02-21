@@ -482,10 +482,6 @@ define(['components/placeholders.min', 'components/magnific'], function($placeho
           		global.scrollToID('#map');
           		return false;
 			  });
-
-			
-          	/* buttons span */
-          	$('.btn').wrapInner('<span />');
       	}
   	};
   
