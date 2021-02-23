@@ -113,6 +113,7 @@ define(['components/placeholders.min', 'components/magnific'], function($placeho
 		        	var title = $(this).attr('title');
 					var clickedLinkClassName = $(this).attr('class');
 					var isInlinePopup = $(this).attr('data-inline-popup') || false;
+					var isPaymentPopup = $(this).attr('data-payment-popup') || false;
 
 		        	if (type == '.jpg' || type == '.gif' || type == '.png' || type == 'jpeg')
 		        	{
@@ -123,7 +124,18 @@ define(['components/placeholders.min', 'components/magnific'], function($placeho
 					}
 		        	else {
 		        		type = 'iframe';
-		        	}
+					}
+					
+					if (isPaymentPopup && !window.Stripe) {
+						$.ajax({
+							url: 'https://js.stripe.com/v3/',
+							dataType: 'script',
+							success: function() {
+								global.paymentForms();
+							},
+							async: true
+						});
+					}
 
 					$.magnificPopup.open({
 					  items: {
@@ -138,7 +150,7 @@ define(['components/placeholders.min', 'components/magnific'], function($placeho
 					  callbacks: {
 					    close: function() {
 					    	
-					      if(clickedLinkClassName.indexOf('js-scrollToContent') > -1) {
+					      if (clickedLinkClassName.indexOf('js-scrollToContent') > -1) {
 
 							var targetOffset = $('.main').offset().top;
 
@@ -467,7 +479,6 @@ define(['components/placeholders.min', 'components/magnific'], function($placeho
       		global.fallbacks();
       		global.marketo_popup();
       		global.social_media_share();
-			global.paymentForms();
 			global.animations();
 			global.ctaAds();
 
