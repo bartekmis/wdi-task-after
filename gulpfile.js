@@ -220,8 +220,8 @@ gulp.task('write-service-worker', (cb) => {
     cacheId: 'optimised-frontend',
     // sw-toolbox.js needs to be listed first. It sets up methods used in runtime-caching.js.
     importScripts: [
-      src_folder + 'sw/sw-toolbox.js',
-      src_folder + 'sw/runtime-caching.js'
+      'assets/js/sw/sw-toolbox.js',
+      'assets/js/sw/runtime-caching.js'
     ],
     staticFileGlobs: [
       // Add/remove glob patterns to match your directory setup.
