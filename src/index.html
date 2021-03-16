@@ -1004,5 +1004,14 @@
     <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
 
     <script>var scriptsExecuted=false; var head=document.getElementsByTagName('head')[0] || document.documentElement; function executeScripts(){var fscripts=document.querySelectorAll('fscript'); [].forEach.call(fscripts, function(fscript){var script=document.createElement('script'); script.type='text/javascript'; if (fscript.hasAttributes()){for (var attributeKey in fscript.attributes){if (fscript.attributes.hasOwnProperty(attributeKey)){script[ fscript.attributes[ attributeKey].name]=fscript.attributes[ attributeKey].value || true;}}}else{script.appendChild( document.createTextNode( fscript.innerHTML ) );}head.insertBefore( script, head.firstChild );});}function initScripts(){console.log(123); if (scriptsExecuted){return;}scriptsExecuted=true; setTimeout(function(){if ('requestIdleCallback' in window){requestIdleCallback(executeScripts,{timeout: 1000});}else{executeScripts();}}, 1000);}window.addEventListener('scroll', function(){initScripts();}, false); document.onclick=function(){initScripts();}; </script>
+  
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
+  
   </body>
 </html>
